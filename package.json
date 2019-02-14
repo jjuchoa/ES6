@@ -2,9 +2,14 @@
   "name": "ES6",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/jjuchoa/ES6.git",
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1"
+  },
+  "scripts": {
+    "dev": "babel ./main.js -o ./bundle.js -w"
   }
 }
