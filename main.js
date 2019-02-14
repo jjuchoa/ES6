@@ -1,31 +1,7 @@
-class List {
-    constructor(){
-        this.data = [];
-    }
-
-    add(data) {
-        this.data.push(data);
-        console.log(this.data);
+class Matematica{
+    static soma(a, b) {
+        return a + b;
     }
 }
 
-class TodoList extends List{
-    constructor(){
-        super();
-
-        this.usuario = 'Junior';
-    }
-
-    mostrausuario() {
-        console.log(this.usuario);
-    }
- 
-}
-
-const MinhaList = new TodoList();
-
-document.getElementById("novotodo").onclick = function() {
-    MinhaList.add("Novo todo");
-}
-
-MinhaList.mostrausuario();
+console.log(Matematica.soma(1, 2));
