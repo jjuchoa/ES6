@@ -9,14 +9,16 @@ const usuario = {
 
 //Sem Desestruturacao
 /*
-const nome = usuario.endereco;
-const idade = usuario.idade;
-const cidade = usuario.endereco.cidade;
+function mostraNome(usuario) {
+    console.log(usuario.nome);
+}
+
+mostraNome(usuario);
 */
 
-//Com Desestruturando
-const {nome, idade, endereco:{cidade}} = usuario;
+//Com Desestruturacao
+function mostraNome({nome, idade}) {
+    console.log(nome, idade);
+}
 
-console.log(nome);
-console.log(idade);
-console.log(cidade);
+mostraNome(usuario);
