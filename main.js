@@ -1,15 +1,22 @@
-//Função normal
-/*
-function soma(a = 3, b = 6) {
-    return a + b;
-}
+const usuario = {
+    nome: 'Junior',
+    idade: 23,
+    endereco: {
+        cidade: 'Fortaleza',
+        estado: 'CE'
+    },
+};
 
-console.log(soma(1));
-console.log(soma());
+//Sem Desestruturacao
+/*
+const nome = usuario.endereco;
+const idade = usuario.idade;
+const cidade = usuario.endereco.cidade;
 */
 
-//Arrow function
-const soma = (a = 3, b = 6) => a + b;
+//Com Desestruturando
+const {nome, idade, endereco:{cidade}} = usuario;
 
-console.log(soma(1));
-console.log(soma());
+console.log(nome);
+console.log(idade);
+console.log(cidade);
