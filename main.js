@@ -1,24 +1,15 @@
-const arr = [1,3,4,5,6]
-
-//Antes
+//Função normal
 /*
-const newArr = arr.map(function(item){
-    return item * 2;
-});
+function soma(a = 3, b = 6) {
+    return a + b;
+}
 
-console.log(newArr);
-*/
-//Depois
-const newArr = arr.map(item => item * 2);
-
-console.log(newArr);
-
-/*
-const teste = () => 3;
-
-console.log(teste);
+console.log(soma(1));
+console.log(soma());
 */
 
-const teste = () => ({nome: 'Diego'});
+//Arrow function
+const soma = (a = 3, b = 6) => a + b;
 
-console.log(teste());
+console.log(soma(1));
+console.log(soma());
