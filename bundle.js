@@ -1,27 +1,9 @@
-"use strict";
-
-var usuario = {
-  nome: 'Junior',
-  idade: 23,
-  endereco: {
-    cidade: 'Fortaleza',
-    estado: 'CE'
-  }
-}; //Sem Desestruturacao
-
 /*
-function mostraNome(usuario) {
-    console.log(usuario.nome);
-}
-
-mostraNome(usuario);
+Para usar os operadores rest e spread é necessário a intalaçao de um plugin 
+cmd comando: 
+yarn add @babel/plugin-proposal-object-rest-spread
+Depois adicionar o plugin no .babelrc: 
+"plugins": ["@babel/plugin-proposal-object-rest-spread"]
+Reiniciar o yarn dev
 */
-//Com Desestruturacao
-
-function mostraNome(_ref) {
-  var nome = _ref.nome,
-      idade = _ref.idade;
-  console.log(nome, idade);
-}
-
-mostraNome(usuario);
+"use strict";
