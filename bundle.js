@@ -1,20 +1,30 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 8, 9];
-var newArr = arr.map(function (item, index) {
-  //return item * 2;
-  return item + index;
+var arr = [1, 3, 4, 5, 6]; //Antes
+
+/*
+const newArr = arr.map(function(item){
+    return item * 2;
+});
+
+console.log(newArr);
+*/
+//Depois
+
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
 console.log(newArr);
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum);
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(filter);
-var find = arr.find(function (item) {
-  return item === 4;
-});
-console.log(find);
+/*
+const teste = () => 3;
+
+console.log(teste);
+*/
+
+var teste = function teste() {
+  return {
+    nome: 'Diego'
+  };
+};
+
+console.log(teste());
