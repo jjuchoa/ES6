@@ -1,9 +1,8 @@
-function teste(x) {
-    let y = 2;
+const arr = [1,3,4,5,8,9]
 
-    if (x > 5) {
-        console.log(x,y);
-    }
-}
+const newArr = arr.map(function(item, index){
+    //return item * 2;
+    return item + index;
+});
 
-teste(10);
+console.log(newArr);
