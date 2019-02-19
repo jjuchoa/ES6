@@ -1,26 +1,57 @@
 "use strict";
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+//REST ...
+//Em Objetos
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+/* 
+const usuario = {
+    nome: 'Junior',
+    idade: 35,
+    cidade: 'Fortaleza'
+};
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+const { nome, ...resto } = usuario
 
-var Matematica =
-/*#__PURE__*/
-function () {
-  function Matematica() {
-    _classCallCheck(this, Matematica);
+console.log(nome);
+console.log(resto);
+*/
+//Em Vetores
+
+/*
+const arr = [1, 2, 3, 4];
+
+const [a, b, ...c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+*/
+//Parametros de funções
+//Antes
+function soma1(a, b) {
+  return a + b;
+}
+
+console.log(soma1(1, 3)); //Depois
+
+function soma2() {
+  for (var _len = arguments.length, params = new Array(_len), _key = 0; _key < _len; _key++) {
+    params[_key] = arguments[_key];
   }
 
-  _createClass(Matematica, null, [{
-    key: "soma",
-    value: function soma(a, b) {
-      return a + b;
-    }
-  }]);
+  return params.reduce(function (total, next) {
+    return total + next;
+  });
+}
 
-  return Matematica;
-}();
+console.log(soma2(1, 3, 4));
 
-console.log(Matematica.soma(1, 2));
+function soma3(a, b) {
+  for (var _len2 = arguments.length, params = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+    params[_key2 - 2] = arguments[_key2];
+  }
+
+  return params;
+}
+
+console.log(soma3(1, 3, 4, 5, 6, 7));
