@@ -1,18 +1,8 @@
-//SPREAD
+const nome = "Junior";
+const idade = 35;
 
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
+//Sem template literals
+//console.log('Meu nome é '+ nome + ' e tenho '+ idade + ' anos ');
 
-const arr3 = [...arr1, ...arr2];
-
-console.log(arr3);
-
-const usuario1 = {
-    nome: 'Junior',
-    idade: 35,
-    cidade: 'Fortaleza',
-};
-
-const usuario2 = { ...usuario1, nome: 'Luna' };
-
-console.log(usuario2);
+////Com template literals
+console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
