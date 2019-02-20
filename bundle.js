@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.soma = soma;\n\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.soma = soma;\nexports.sub = sub;\nexports.mult = mult;\n\n/*\r\nexport default function soma(a, b) {\r\n    return a + b;\r\n}\r\n*/\nfunction soma(a, b) {\n  return a + b;\n}\n\nfunction sub(a, b) {\n  return a - b;\n}\n\nfunction mult(a, b) {\n  return a * b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _funcoes = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n\nconsole.log((0, _funcoes.soma)(1, 2));\n\n//# sourceURL=webpack:///./main.js?");
+eval("\n\nvar funcoes = _interopRequireWildcard(__webpack_require__(/*! ./funcoes */ \"./funcoes.js\"));\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }\n\n//import {soma, sub} from './funcoes';\n//import soma from './soma';\n//import {soma as somaFunction, sub} from './funcoes';\n//import soma, {sub} from './funcoes';\n//console.log(soma(1, 2));\n//console.log(sub(4, 2));\n//console.log(somaFunction(1, 2));\n//console.log(soma(1, 2));\n//console.log(funcoes);\nconsole.log(funcoes.soma(1, 2));\nconsole.log(funcoes.sub(4, 2));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
