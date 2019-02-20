@@ -1,8 +1,19 @@
 const nome = "Junior";
 const idade = 35;
 
-//Sem template literals
-//console.log('Meu nome é '+ nome + ' e tenho '+ idade + ' anos ');
+//Antes
+/*
+const usuario = {
+    nome: nome,
+    idade: idade,
+    cidade: "Fortaleza",
+};
+*/
+//Depois
+const usuario = {
+    nome,
+    idade,
+    cidade: "Fortaleza",
+};
 
-////Com template literals
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);
+console.log(usuario);
