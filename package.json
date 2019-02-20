@@ -4,13 +4,18 @@
   "main": "index.js",
   "repository": "https://github.com/jjuchoa/ES6.git",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
-    "@babel/preset-env": "^7.3.1"
+    "@babel/preset-env": "^7.3.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "8.0.0-beta.0",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
   },
   "scripts": {
-    "dev": "babel ./main.js -o ./bundle.js -w"
+    "dev": "webpack --mode=development -w"
   }
 }
