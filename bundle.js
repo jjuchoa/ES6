@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./funcoes.js":
+/*!********************!*\
+  !*** ./funcoes.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.soma = soma;\n\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./funcoes.js?");
+
+/***/ }),
+
 /***/ "./main.js":
 /*!*****************!*\
   !*** ./main.js ***!
@@ -94,7 +106,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/*\r\nInstalar o webpack webpack-cli\r\nNo package.jason ajustar as \"dependencies\" para \"devDependencies\"\r\nQuando for instalar uma dependencia para desenvolvimento, basta informar -D no final\r\nyarn add webpack webpack-cli -D\r\ncriar o arquivo de configuraçao do webpack webpack.config.js\r\nInstalar o babel-loader \r\nyarn add babel-loader -D\r\nExecutar o webpack substituindo no package.json \"dev\": \"babel ./main.js -o ./bundle.js -w\" para \"dev\": \"webpack --mode=development -w\"\r\nInstalar o babel-loader@8.0.0-beta.0 \r\nyarn add babel-loader@8.0.0-beta.0 -D\r\n*/\n\n\n//# sourceURL=webpack:///./main.js?");
+eval("\n\nvar _funcoes = __webpack_require__(/*! ./funcoes */ \"./funcoes.js\");\n\nconsole.log((0, _funcoes.soma)(1, 2));\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
