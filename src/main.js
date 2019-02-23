@@ -1,52 +1,19 @@
-import { resolve } from "uri-js";
-import { request } from "https";
+// configurando axios
+//yarn add axios
 
-const minhaPromise = () => new Promise((resolve, rejects)=> {
-    setTimeout(() => {resolve('OK')}, 2000);
-});
+import axios from 'axios';
 
-//JavaScript
-//minhaPromise().then(response => {
-//    console.log(response);
-//})
-//.catch(err => {
-
-//});
-//*/
-
-//ES6, ES7 e ES8
-//yarn add @babel/plugin-transform-async-to-generator -D
-//altera o package.json
-//yarn add @babel/polyfill -D
-//altera o webpack.config.js
-
-/*
-//modo 1
-async function executaPromise(){
-    const response = await minhaPromise();
-
-    console.log(response);
+class Api {
+    static async getUserInfo(username) {
+        try{
+            const response = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(response);
+        } catch (err){
+        console.warn('Erro na API');        
+        }
+        
+    }
 }
 
-executaPromise();
-*/
-
-//modo 2
-/*
-async function executaPromise(){
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());    
-}
-
-executaPromise();
-*/
-
-//com arrow function
-const executaPromise = async () => {
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());    
-};
-
-executaPromise();
+Api.getUserInfo('jjuchoa');
+Api.getUserInfo('jjuchoa1561621');
