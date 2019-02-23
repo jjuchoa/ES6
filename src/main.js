@@ -1,10 +1,52 @@
-import * as funcoes from './funcoes';
-import soma, { sub } from './funcoes';
-import somaFunction from './soma';
+import { resolve } from "uri-js";
+import { request } from "https";
 
-console.log(funcoes);
-console.log(funcoes.sub(4, 2));
-console.log(funcoes.mult(3, 3));
-console.log(soma(1, 2));
-console.log(sub(4, 2));
-console.log(somaFunction(2, 2));
+const minhaPromise = () => new Promise((resolve, rejects)=> {
+    setTimeout(() => {resolve('OK')}, 2000);
+});
+
+//JavaScript
+//minhaPromise().then(response => {
+//    console.log(response);
+//})
+//.catch(err => {
+
+//});
+//*/
+
+//ES6, ES7 e ES8
+//yarn add @babel/plugin-transform-async-to-generator -D
+//altera o package.json
+//yarn add @babel/polyfill -D
+//altera o webpack.config.js
+
+/*
+//modo 1
+async function executaPromise(){
+    const response = await minhaPromise();
+
+    console.log(response);
+}
+
+executaPromise();
+*/
+
+//modo 2
+/*
+async function executaPromise(){
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());    
+}
+
+executaPromise();
+*/
+
+//com arrow function
+const executaPromise = async () => {
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());    
+};
+
+executaPromise();
